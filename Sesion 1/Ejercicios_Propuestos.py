@@ -11,7 +11,7 @@
 
 # G = 9.8
 # T = float(input('Ingresar el tiempo recorrido en segundos: '))
-# H = 0.5 * G * pow(T, 2)
+# H = 0.5 * G * T ** 2
 # print('La altura de la que cae es: ', H)
 
 
@@ -21,7 +21,7 @@
 
 # altura = float(input('Ingrese la altura del cilindro: '))
 # radio = 2
-# volumen = math.pi * pow(radio, 2) * altura
+# volumen = math.pi * radio ** 2 * altura
 # print('El volumen del cilindro es: ', volumen)
 
 
@@ -47,8 +47,9 @@
 # y1, y2 = int(input('El punto y1 es: ')), int(input('El punto y2 es: '))
 # print(f'Segundo punto: ({y1}, {y2})')
 
-# distancia = pow( pow(x2 - x1, 2) + pow(y2 - y1, 2) , 0.5)
-# print('La distancia entre los dos puntos es: ',  distancia)
+# distancia1 = ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5
+# distancia2 = pow( pow(x2 - x1, 2) + pow(y2 - y1, 2) , 0.5)
+# print('La distancia entre los dos puntos es: ',  distancia1, distancia2)
 
 
 #Ejercicio 6
@@ -75,3 +76,50 @@
 #     cantidad = cantidad % 2
 #     print('Monedas de 2: ', cambio)
 # print('Monedas de 1: ', cantidad)
+
+
+#Ejercicio 7
+# a = int(input("Ingrese numero: "))
+# if a < 1000:
+#     conversion = int(str(a)[len(str(a)) - 1])
+# else:
+#     conversion = int(str(a)[len(str(a)) - 4] + str(a)[len(str(a)) - 1])
+# print("Conversion: ", conversion)
+
+# numero = int(input("Ingrese numero: "))
+# u = numero % 10
+# m = numero // 100
+# r = m * 10 + u
+# print(r)
+
+
+#Ejercicio 8
+# numero = int(input(""))
+# i = int(len(str(numero)))
+# conversion = ""
+# while i > 0:
+#     conversion = conversion + str(numero)[i - 1]
+#     i = i - 1
+# print("Numero invertido: ", conversion)
+
+# numero = int(input("Ingresar numero: "))
+# u = numero % 10
+# d = (numero % 100) // 10
+# c = numero // 100
+# conversion = u * 100 + d * 10 + c
+# print("Numero invertido: ", conversion)
+
+
+#Ejercicio 9
+# precioLitros = 3.86
+# galones = int(input("Numero de galones vendidos: "))
+# cobro = galones * 3.785 * precioLitros
+# print("Total a cobrar: ", cobro)
+
+#Ejercicio 10
+capital = float(input("Ingrese el capital: "))
+periodos = int(input("Ingrese el numero de periodos: "))
+interes = float(input("Ingrese tasa de interes: "))
+monto = capital * (1 + interes/100) ** periodos
+interes = monto - capital
+print("Interes generado: ", capital)
