@@ -146,65 +146,65 @@
 
 
 # Ejercicio 9
-n = int(input('Ingrese numero de datos lista 1: '))
-lista1 = []
-for i in range(n):
-    dato = input(f'Ingrese dato {i}: ')
-    lista1.append(dato)
+# n = int(input('Ingrese numero de datos lista 1: '))
+# lista1 = []
+# for i in range(n):
+#     dato = input(f'Ingrese dato {i}: ')
+#     lista1.append(dato)
     
-i = 0
-while i < len(lista1):
-    j = i + 1
-    while j < len(lista1):
-        if lista1[i] == lista1[j]:
-            del lista1[j]
-            j = j - 1
-        j = j + 1
-    i = i + 1
+# i = 0
+# while i < len(lista1):
+#     j = i + 1
+#     while j < len(lista1):
+#         if lista1[i] == lista1[j]:
+#             del lista1[j]
+#             j = j - 1
+#         j = j + 1
+#     i = i + 1
 
-lista2 = []
-m = int(input('Ingrese numero de datos lista 2: '))
-for i in range(m):
-    dato = input(f'Ingrese dato {i}: ')
-    lista2.append(dato)
+# lista2 = []
+# m = int(input('Ingrese numero de datos lista 2: '))
+# for i in range(m):
+#     dato = input(f'Ingrese dato {i}: ')
+#     lista2.append(dato)
     
-i = 0
-while i < len(lista2):
-    j = i + 1
-    while j < len(lista2):
-        if lista2[i] == lista2[j]:
-            del lista2[j]
-            j = j - 1
-        j = j + 1
-    i = i + 1
+# i = 0
+# while i < len(lista2):
+#     j = i + 1
+#     while j < len(lista2):
+#         if lista2[i] == lista2[j]:
+#             del lista2[j]
+#             j = j - 1
+#         j = j + 1
+#     i = i + 1
     
 
-union = lista1
-for elemento in lista2:
-    if elemento not in union:
-        union.append(elemento)
+# union = lista1
+# for elemento in lista2:
+#     if elemento not in union:
+#         union.append(elemento)
 
-interseccion = []
-for elemento in lista1:
-    if elemento in lista2:
-        interseccion.append(elemento)
+# interseccion = []
+# for elemento in lista1:
+#     if elemento in lista2:
+#         interseccion.append(elemento)
 
 
-diferencia = []
-for elemento in lista1:
-    if elemento not in lista2:
-        diferencia.append(elemento)
+# diferencia = []
+# for elemento in lista1:
+#     if elemento not in lista2:
+#         diferencia.append(elemento)
         
-union.sort()
-interseccion.sort()
-diferencia.sort()
-print()
-print('Lista 1: ', lista1)
-print('Lista 2: ', lista2)
-print()
-print('Union: ', union)
-print('Interseccion: ', interseccion)
-print('Diferencia: ', diferencia)
+# union.sort()
+# interseccion.sort()
+# diferencia.sort()
+# print()
+# print('Lista 1: ', lista1)
+# print('Lista 2: ', lista2)
+# print()
+# print('Union: ', union)
+# print('Interseccion: ', interseccion)
+# print('Diferencia: ', diferencia)
 
 # union = []
 # if n > m:
@@ -225,3 +225,217 @@ print('Diferencia: ', diferencia)
 # diferencia = set(lista1).difference(set(lista2))
 # if len(diferencia) > 0 :
 #     print(diferencia)
+
+
+# MATRICES
+# Ejercicio 1
+# f = int(input('Ingrese numero de filas: '))
+# c = int(input('Ingrese numero de columnas: '))
+
+# matriz = []
+# for i in range(f):
+#     fila = []
+#     for j in range(c):
+#         dato = int(input(f'Ingrese dato[{i}][{j}]: '))
+#         fila.append(dato)
+#     matriz.append(fila)
+    
+# for fila in matriz:
+#     print(fila)
+
+# transpuesta = []
+# for i in range(len(matriz[0])): # len(matriz[0]) == columnas
+#     transpuesta.append([])
+#     for j in range(len(matriz)): #len(matriz) == filas
+#         transpuesta[i].append(matriz[j][i])
+
+# print('Transpuesta...')
+# for fila in transpuesta:
+#     print(fila)
+
+
+# Ejercicio 2
+# f = int(input('Ingrese numero de filas: '))
+# c = int(input('Ingrese numero de columnas: '))
+
+# matriz = []
+# for i in range(f):
+#     fila = []
+#     for j in range(c):
+#         dato = int(input(f'Ingrese dato[{i}][{j}]: '))
+#         fila.append(dato)
+#     matriz.append(fila)
+    
+# for fila in matriz:
+#     print(fila)
+    
+# for i in range(f):
+#     mayor = 0
+#     for j in range(c):
+#         if matriz[i][j] >= mayor:
+#             mayor = matriz[i][j]
+#     print(f'El mayor numero de la fila {i} es: {mayor}')
+
+
+# Ejercicio 3
+# f = int(input('Ingrese numero de filas: '))
+# c = int(input('Ingrese numero de columnas: '))
+
+# matriz = []
+# for i in range(f):
+#     fila = []
+#     for j in range(c):
+#         dato = int(input(f'Ingrese dato[{i}][{j}]: '))
+#         fila.append(dato)
+#     matriz.append(fila)
+    
+# for fila in matriz:
+#     print(fila)
+
+# columna = int(input('Ingrese numero de columna: '))
+# for i in range(f):
+#     del matriz[i][columna]
+
+# print('Nueva matriz: ')
+# for fila in matriz:
+#     print(fila)
+
+
+# Ejercicio 4
+# f = int(input('Ingrese numero de filas: '))
+# c = int(input('Ingrese numero de columnas: '))
+
+# matriz = []
+# for i in range(f):
+#     fila = []
+#     for j in range(c):
+#         dato = int(input(f'Ingrese dato[{i}][{j}]: '))
+#         fila.append(dato)
+#     matriz.append(fila)
+    
+# for fila in matriz:
+#     print(fila)
+    
+# fila = int(input('Ingrese numero de fila: '))
+# nueva = []
+# for i in range(c):
+#     dato = int(input(f'Ingrese dato[{fila}][{i}]: '))
+#     nueva.append(dato)
+# matriz.insert(fila, nueva)
+
+# for fila in matriz:
+#     print(fila)
+
+
+# Ejercicio 5
+# f = int(input('Ingrese numero de filas: '))
+# c = int(input('Ingrese numero de columnas: '))
+
+# matriz = []
+# for i in range(f):
+#     fila = []
+#     for j in range(c):
+#         dato = int(input(f'Ingrese dato[{i}][{j}]: '))
+#         fila.append(dato)
+#     matriz.append(fila)
+    
+# for fila in matriz:
+#     print(fila)
+
+# col1 = int(input('Ingrese numero de columna a intercambiar: '))
+# col2 = int(input('Ingrese numero de columna a intercambiar: '))
+
+# for i in range(f):
+#     temp = matriz[i][col1] 
+#     matriz[i][col1] = matriz[i][col2]
+#     matriz[i][col2] = temp
+
+# for i in range(f):
+#     matriz[i][col1], matriz[i][col2] = matriz[i][col2], matriz[i][col1]
+
+# for fila in matriz:
+#     print(fila)
+ 
+
+# Ejercicio 6
+# o = int(input('Ingrese orden de matriz cuadrada: '))
+# matriz = []
+# for i in range(o):
+#     fila = []
+#     for j in range(o):
+#         dato = int(input(f'Ingrese datos[{i}][{j}]: '))
+#         fila.append(dato)
+#     matriz.append(fila)
+
+# for fila in matriz:
+#     print(fila)
+
+# suma = 0
+# for i in range(o):
+#     for j in range(o):
+#         if i == j:
+#             suma += matriz[i][j]
+# print(f'La suma de la diagonal principal es: {suma}')
+
+# promedio = 0
+# j = o - 1
+# for i in range(o):
+#     promedio += matriz[i][j]
+#     j -= 1
+# promedio /= o
+# print(f'El promedio de la diagonal secundario es: {promedio}')
+
+
+# Ejercicio 7
+# o = int(input('Ingrese orden de matriz cuadrada: '))
+# matriz = []
+# for i in range(o):
+#     fila = []
+#     for j in range(o):
+#         dato = int(input(f'Ingrese datos[{i}][{j}]: '))
+#         fila.append(dato)
+#     matriz.append(fila)
+
+# for fila in matriz:
+#     print(fila)
+
+# transpuesta = []
+# for i in range(len(matriz[0])): 
+#     transpuesta.append([])
+#     for j in range(len(matriz)): 
+#         transpuesta[i].append(matriz[j][i])
+        
+# if matriz == transpuesta:
+#     print('La matriz es simetrica.')
+# else:
+#     print('La matriz no es simétrica.')
+
+
+# Ejercicio 8
+f = int(input('Ingrese numero de filas: '))
+c = int(input('Ingrese numero de columnas: '))
+
+matriz = []
+for i in range(f):
+    fila = []
+    for j in range(c):
+        dato = int(input(f'Ingrese dato[{i}][{j}]: '))
+        fila.append(dato)
+    matriz.append(fila)
+
+print('Matriz original...')
+for fila in matriz:
+    print(fila)
+    
+for c in range(c):
+    for i in range(f-1):
+        j = f - 1
+        while j > i:
+            if matriz[j][c] < matriz[j - 1][c]:
+                matriz[j][c], matriz[j - 1][c] = matriz[j - 1][c], matriz[j][c]
+            j -= 1
+    
+
+print('Matriz con columnas ordenadas...')
+for fila in matriz:
+    print(fila)
